@@ -213,7 +213,7 @@
     function getDays() {
         // 将日期字符串转换为 Date 对象
         const d1 = new Date("2024-04-27");
-        const d2 = new Date(t2);
+        const d2 = new Date();
 
         // 将时间部分设置为 0，以便仅比较日期部分
         d1.setHours(0, 0, 0, 0);
@@ -227,7 +227,9 @@
     }
 
     // 修改恋爱天数
-    document.getElementById('loveDays').innerHTML = '在一起已经'+getDays()+'天啦😘😘😘';
+    var days = getDays();
+    console.log(days);
+    document.getElementById('loveDays').innerHTML = '在一起已经'+days+'天啦😘😘😘';
     </script>
 
     </body></html>
